@@ -41,7 +41,7 @@ Extract and copy to the folder were the main python script resides.</br>
 
 ##
 ### License:
-<a href="http://www.gnu.org/licenses">GPLv2</a> (see also inside `MRS_T2fit.py`)
+<a href="http://www.gnu.org/licenses">GPLv2</a> (see also inside `fMRS_sliding_window.py`)
 
 ### Author:
 Bernd Foerster, bfoerster at gmail dot com
