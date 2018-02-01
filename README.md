@@ -4,7 +4,6 @@ Sliding window averaging for functional MRS
 The Software takes a dynamic series of several Single Voxel Spectra 
 and fits the Brain metabolites while doing sliding window averaging
 with a user specified window size
-Knowledge of T2 is a pre-requisite for attenuation correction in
 
 This software is basically a script calling the MRS processing tool</br>
 TARQUIN (http://tarquin.sourceforge.net) 
@@ -26,7 +25,7 @@ For convenience these files are included in the "Supportfiles_" archives for the
 Extract and copy to the folder were the main python script resides.</br>
 
 ### Runs under:
-- Windows (standalone binary included under the release tab)
+- Windows
 - Linux
 - MacOS
 
