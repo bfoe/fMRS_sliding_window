@@ -379,6 +379,7 @@ f2.close()
 #analyse results
 Found = False
 treshold = 0.707 #(r-squared = 0.5, means 50% chance that tis is really correlated)
+tresh2 = 0.5
 p_tresh = 0.05
 mask = pvalue<p_tresh
 results =  correlation*mask
@@ -397,11 +398,18 @@ for i in  range ( metabolites.shape[1]):
    if amax>treshold:
       Found = True   
       lprint ('Significant correlation = '+c_max+' (p='+p_max+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imax))
+   elif amax>tresh2:
+      Found = True 
+      lprint ('Possible    correlation = '+c_max+' (p='+p_max+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imax))   
    if amin<-1.0*treshold: 
       Found = True 
-      lprint ('Significant correlation =' +c_min+' (p='+p_min+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imin))      
+      lprint ('Significant correlation =' +c_min+' (p='+p_min+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imin))
+   if amin<-1.0*treshold: 
+      Found = True 
+      lprint ('Possible    correlation =' +c_min+' (p='+p_min+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imin))
+   
 if not Found: 
-   lprint ('No statistically significant correlations found (correlation>'+str(treshold)+', p<'+str(p_tresh)+')') 
+   lprint ('No correlations found (correlation>'+str(treshold)+', p<'+str(p_tresh)+')') 
 lprint ('\ndone\n')    
     
 # paired t-test: http://iaingallagher.tumblr.com/post/50980987285/t-tests-in-python
