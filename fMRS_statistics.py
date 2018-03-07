@@ -404,7 +404,7 @@ for i in  range ( metabolites.shape[1]):
    if amin<-1.0*treshold: 
       Found = True 
       lprint ('Significant correlation =' +c_min+' (p='+p_min+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imin))
-   if amin<-1.0*treshold: 
+   elif amin<-1.0*tresh2: 
       Found = True 
       lprint ('Possible    correlation =' +c_min+' (p='+p_min+') in metabolite "'+metabolitenames[i]+'" at shift '+str(imin))
    
